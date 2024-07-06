@@ -1,8 +1,6 @@
 import mongoose from "mongoose";
 import jwt from "jsonwebtoken";
 
-const secret = "HEELOROSHNAKYAEJKSLS";
-
 const registerSchema = new mongoose.Schema(
   {
     name: {
@@ -41,7 +39,7 @@ registerSchema.methods.generateToken = async function() {
         email: this.email,
         username: this.username,
       },
-      secret
+      process.env.SECRET
     );
   } catch (error) {
     console.log("token error", error);
