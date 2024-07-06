@@ -3,7 +3,7 @@ const app = express()
 import dotenv from "dotenv"
 import cors from "cors"
 const corOptions = {
-    origin:"http://localhost:5173",
+    origin:"https://gilded-druid-eded82.netlify.app",
     methods:"GET ,POST ,PUT ,DELETE,PATCH",
     Credential:true
 
